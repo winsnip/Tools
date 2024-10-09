@@ -47,12 +47,9 @@ install_dependencies
 
 if command -v rustup &> /dev/null; then
     echo -e "${GREEN}Rust is already installed.${RESET}"
-    read -p "Do you want to reinstall or update Rust? (y/n): " choice
-    if [[ "$choice" == "y" ]]; then
-        echo -e "${CYAN}Reinstalling Rust...${RESET}"
-        rustup self uninstall -y
-        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-    fi
+    echo -e "${CYAN}Updating Rust...${RESET}"
+    rustup self uninstall -y
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 else
     echo -e "${YELLOW}Rust is not installed. Installing Rust...${RESET}"
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
