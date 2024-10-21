@@ -5,6 +5,18 @@ from hdwallet.cryptocurrencies import EthereumMainnet
 from hdwallet.derivations import BIP44Derivation
 import pandas as pd
 
+def display_welcome_message():
+    logo = r"""
+██     ██ ██ ███    ██ ███████ ███    ██ ██ ██████  
+██     ██ ██ ████   ██ ██      ████   ██ ██ ██   ██ 
+██  █  ██ ██ ██ ██  ██ ███████ ██ ██  ██ ██ ██████  
+██ ███ ██ ██ ██  ██ ██      ██ ██  ██ ██ ██ ██      
+ ███ ███  ██ ██   ████ ███████ ██   ████ ██ ██      
+"""
+    print(logo)
+    print("SuiWallet Generator")
+    print("Join our Telegram channel: https://t.me/winsnip")
+
 class Suiwallet:
     def __init__(self, mnemonic: str, password='') -> None:
         self.mnemonic: str = mnemonic.strip()
@@ -24,7 +36,6 @@ class Suiwallet:
 
         return address, pk
 
-
 def generate_evm_wallet(mnemonic: str):
     bip44_hdwallet: BIP44HDWallet = BIP44HDWallet(cryptocurrency=EthereumMainnet)
     bip44_hdwallet.from_mnemonic(mnemonic=mnemonic, language="english", passphrase=None)
@@ -36,7 +47,6 @@ def generate_evm_wallet(mnemonic: str):
     private_key = bip44_hdwallet.private_key()
 
     return address, private_key
-
 
 def generate_solana_wallet(mnemonic: str):
     seed_bytes = Bip39SeedGenerator(mnemonic).Generate()
@@ -53,6 +63,8 @@ def generate_aptos_wallet(mnemonic: str):
     return address, private_key
 
 def generate_wallets():
+    display_welcome_message()
+    
     num_wallets = int(input("Berapa banyak wallet yang ingin dihasilkan? "))
 
     wallet_data = []
