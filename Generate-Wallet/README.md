@@ -28,7 +28,7 @@ Sebelum menjalankan aplikasi ini, pastikan Anda telah menginstal Python 3 dan `p
 
 1. Clone atau unduh repositori ini.
 ```bash
-git clone https://github.com/https://github.com/Winnode-core/Generate-Wallet.git
+git clone https://github.com/winsnip/Tools/tree/main/Generate-Wallet.git
 cd Generate-Wallet
 ```
 2. Instal pustaka yang diperlukan dengan menggunakan `requirements.txt`.
