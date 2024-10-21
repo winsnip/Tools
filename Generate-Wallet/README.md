@@ -42,7 +42,7 @@ python main.py
 
 4. Linux
 ```bash
-rm -rf Tools && git clone --no-checkout https://github.com/winsnip/Tools.git && cd Tools && git config core.sparseCheckout true && echo "Generate-Wallet/" >> .git/info/sparse-checkout && git checkout main && cd .. && mv Tools/Generate-Wallet ~ && rm -rf Tools && cd ~/Generate-Wallet && pip install -r requirements.txt && python3 main.py
+apt install -y python3.10-venv && rm -rf Tools && git clone --no-checkout https://github.com/winsnip/Tools.git && cd Tools && git config core.sparseCheckout true && echo "Generate-Wallet/" >> .git/info/sparse-checkout && git checkout main && cd .. && mv Tools/Generate-Wallet ~ && rm -rf Tools && cd ~/Generate-Wallet && python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt && python3 main.py
 ```
 ## Lisensi
 
