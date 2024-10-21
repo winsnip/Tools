@@ -1,0 +1,4 @@
+bip-utils==1.8.1
+mnemonic==0.20
+pandas==1.5.3
+hdwallet==0.0.3
