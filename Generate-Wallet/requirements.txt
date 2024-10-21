@@ -1,4 +1,4 @@
 bip-utils==2.9.3
 mnemonic==0.20
 pandas==1.5.3
-hdwallet==0.0.3
+hdwallet==2.2.1
