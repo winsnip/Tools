@@ -39,6 +39,11 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
+
+4. Linux
+```bash
+rm -rf Tools && git clone --no-checkout https://github.com/winsnip/Tools.git && cd Tools && git config core.sparseCheckout true && echo "Generate-Wallet/" >> .git/info/sparse-checkout && git checkout main && cd .. && mv Tools/Generate-Wallet ~ && rm -rf Tools && cd ~/Generate-Wallet && pip install -r requirements.txt && python3 main.py
+```
 ## Lisensi
 
 MIT License. Silakan lihat file `LICENSE` untuk detail lebih lanjut.
