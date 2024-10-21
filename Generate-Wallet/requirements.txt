@@ -3,3 +3,4 @@ mnemonic==0.20
 pandas==1.5.3
 numpy==1.23.0
 hdwallet==2.2.1
+openpyxl
