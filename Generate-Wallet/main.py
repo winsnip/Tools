@@ -14,7 +14,7 @@ def display_welcome_message():
  ███ ███  ██ ██   ████ ███████ ██   ████ ██ ██      
 """
     print(logo)
-    print("SuiWallet Generator")
+    print("Wallet Generator")
     print("Join our Telegram channel: https://t.me/winsnip")
 
 class Suiwallet:
